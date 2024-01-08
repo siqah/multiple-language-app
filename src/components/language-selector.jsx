@@ -1,4 +1,4 @@
-import { changeLanguage } from 'i18next'
+//import { changeLanguage } from 'i18next'
 import React from 'react'
 
 const languages =[
@@ -8,7 +8,9 @@ const languages =[
 ]
 
 const  changeLanguage = () =>{  
+
 }
+
 const Languageselector = () => {
   return (
     <div className='btn-container'>
