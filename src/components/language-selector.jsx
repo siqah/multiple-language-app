@@ -1,5 +1,7 @@
 //import { changeLanguage } from 'i18next'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
+import i18n  from 'i18next'
 
 const languages =[
     {code:"en", lang: "English"},
@@ -8,15 +10,17 @@ const languages =[
 ]
 
 const  changeLanguage = () =>{  
-
+     const {i18n} = useTranslation();
 }
 
 const Languageselector = () => {
+  const {i18n} = useTranslation();
+
   return (
     <div className='btn-container'>
         {languages.map((lng)=>{
                 return(
-                    <button key={lng.code} onClick={() => changeLanguage()}>{lng.lang}</button>
+                    <button className={lng.code === i18n.language ? "selected" : ""} key={lng.code} onClick={() => changeLanguage()}>{lng.lang}</button>
                 )})
         }
     </div>
